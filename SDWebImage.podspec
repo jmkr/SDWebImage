@@ -26,11 +26,13 @@ Pod::Spec.new do |s|
     core.exclude_files = 'SDWebImage/UIImage+WebP.{h,m}'
   end
 
-  s.subspec 'MapKit' do |mk|
-    mk.source_files = 'SDWebImage/MKAnnotationView+WebCache.*'
-    mk.framework = 'MapKit'
-    mk.dependency 'SDWebImage/Core'
-  end
+  # s.subspec 'MapKit' do |mk|
+  #   mk.source_files = 'SDWebImage/MKAnnotationView+WebCache.*'
+  #   mk.framework = 'MapKit'
+  #   mk.dependency 'SDWebImage/Core'
+  # end
+
+  s.tvos.deployment_target = '9.0'
 
   s.subspec 'WebP' do |webp|
     webp.source_files = 'SDWebImage/UIImage+WebP.{h,m}'
